@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.siskopsya.amm">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="com.siskopsya.amm.app.AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_app"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/roundedlogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name="com.siskopsya.amm.setting.SettingActivity"></activity>
+
+        <service android:name="com.siskopsya.amm.services.MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.siskopsya.amm.services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.siskopsya.amm.menu.SHUActivity" />
+        <activity android:name="com.siskopsya.amm.menu.InvestasiActivity" />
+        <activity android:name="com.siskopsya.amm.menu.HutangQordhulhasanActivity" />
+        <activity android:name="com.siskopsya.amm.menu.HutangMurobahahActivity" />
+        <activity android:name="com.siskopsya.amm.menu.TabunganActivity" />
+        <activity android:name="com.siskopsya.amm.menu.SimpananActivity" />
+        <activity android:name="com.siskopsya.amm.Launch">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.siskopsya.amm.MainActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.siskopsya.amm.LoginActivity"
+            android:configChanges="orientation|screenSize" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
