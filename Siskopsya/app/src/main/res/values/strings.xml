@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Smart Ummat</string>
+    <string name="error_string">Kolom tidak boleh kosong</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="no_anggota">No. Anggota</string>
+    <string name="total_shu">Total SHU</string>
+    <string name="maret">Maret</string>
+    <string name="agustus">Agustus</string>
+    <string name="oktober">Oktober</string>
+    <string name="november">November</string>
+    <string name="desember">Desember</string>
+    <string name="nama_anggota">Nama Anggota</string>
+    <string name="balance_overview">Balance Overview</string>
+    <string name="februari">Februari</string>
+    <string name="juni">Juni</string>
+    <string name="september">September</string>
+    <string name="mei">Mei</string>
+    <string name="juli">Juli</string>
+    <string name="rp_0_00">Rp. 0,00</string>
+    <string name="januari">Januari</string>
+    <string name="simpanan_sukarela">Simpanan Sukarela</string>
+    <string name="simpanan_wajib">Simpanan Wajib</string>
+    <string name="simpanan_pokok">Simpanan Pokok</string>
+    <string name="rincian_simpanan">Rincian Simpanan</string>
+    <string name="total_simpanan">Total Simpanan</string>
+    <string name="total_tabungan">Total Tabungan</string>
+    <string name="april">April</string>
+    <string name="no_rekening">No. Rekening</string>
+</resources>
