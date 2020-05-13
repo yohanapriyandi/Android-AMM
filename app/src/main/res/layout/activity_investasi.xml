@@ -64,15 +64,12 @@
                                         android:paddingRight="@dimen/_4sdp"
                                         android:paddingLeft="@dimen/_4sdp"
                                         android:paddingBottom="@dimen/_13sdp">
-                                        <TextView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
+                                        <Spinner
                                             android:id="@+id/code_project"
-                                            android:textSize="@dimen/_18sdp"
-                                            android:layout_gravity="center"
-                                            android:gravity="center"
-                                            android:text="project-xxx-"
-                                            android:layout_marginBottom="@dimen/_4sdp"/>
+                                            android:layout_width="match_parent"
+                                            android:layout_weight="5"
+                                            android:layout_height="@dimen/_30sdp"
+                                            android:layout_marginBottom="@dimen/_14sdp"/>
                                     </LinearLayout>
                                 </LinearLayout>
 
@@ -149,6 +146,31 @@
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/_12sdp"
                                         android:textColor="@color/grey_800"
+                                        android:text="Nama Project :"/>
+                                    <TextView
+                                        android:id="@+id/nama_project"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/_12sdp"
+                                        android:textColor="@color/grey_800"
+                                        android:text=""/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="7"
+                                android:paddingBottom="@dimen/_8sdp"
+                                android:orientation="horizontal">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/_12sdp"
+                                        android:textColor="@color/grey_800"
                                         android:text="Akad Awal :"/>
                                     <TextView
                                         android:id="@+id/akad_awal"
@@ -200,10 +222,17 @@
                                 android:background="@color/grey_400"
                                 android:layout_marginBottom="@dimen/_5sdp"/>
                         </LinearLayout>
-                        <View
+
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textStyle="bold"
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/_1sdp"
-                            android:background="@color/teal_300"/>
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_22sdp"
+                            android:textColor="@color/blue_400"
+                            android:text="NISBAH"/>
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
@@ -221,6 +250,7 @@
                         android:gravity="center"
                         android:orientation="vertical">
                         <TextView
+                            android:id="@+id/mudhorib"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/_28sdp"
@@ -244,6 +274,7 @@
                         android:gravity="center"
                         android:orientation="vertical">
                         <TextView
+                            android:id="@+id/investor"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/_28sdp"
@@ -297,6 +328,7 @@
                             android:layout_gravity="center"
                             android:layout_marginLeft="@dimen/_15sdp"
                             android:textStyle="bold"
+                            android:gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/_22sdp"
