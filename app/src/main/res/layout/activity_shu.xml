@@ -19,93 +19,110 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="@dimen/_15sdp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorPrimaryAmm"
-                    android:paddingRight="@dimen/_1sdp"
-                    android:paddingLeft="@dimen/_1sdp"
-                    android:paddingTop="@dimen/_1sdp"
-                    android:layout_marginTop="@dimen/_13sdp"
-                    android:paddingBottom="@dimen/_1sdp">
-                    <LinearLayout
+                    android:orientation="vertical">
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@color/white">
-                        <LinearLayout
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_marginTop="@dimen/_13sdp"
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/_100sdp"
-                            android:paddingTop="@dimen/_13sdp"
-                            android:paddingLeft="@dimen/_2sdp"
-                            android:paddingRight="@dimen/_1sdp"
-                            android:paddingBottom="@dimen/_4sdp"
-                            android:orientation="vertical"
-                            android:layout_weight="2">
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:gravity="top">
                             <LinearLayout
-                                android:layout_weight="1"
-                                android:layout_width="@dimen/_300sdp"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:background="@color/colorPrimaryAmm"
                                 android:paddingRight="@dimen/_1sdp"
-                                android:paddingTop="@dimen/_8sdp"
-                                android:paddingBottom="@dimen/_8sdp"
-                                android:paddingLeft="@dimen/_6sdp"
-                                android:orientation="horizontal">
-                                <TextView
-                                    android:layout_width="@dimen/_100sdp"
+                                android:paddingLeft="@dimen/_1sdp"
+                                android:paddingTop="@dimen/_1sdp"
+                                android:layout_marginTop="@dimen/_13sdp"
+                                android:paddingBottom="@dimen/_1sdp">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/no_anggota"
-                                    android:gravity="start"
-                                    android:background="@color/colorPrimaryAmm"
-                                    app:fontFamily="@font/roboto"
-                                    android:textSize="@dimen/_13sdp"
-                                    android:textColor="@color/white"
-                                    android:paddingBottom="@dimen/_1sdp"/>
-                                <TextView
-                                    android:id="@+id/no_anggota"
-                                    android:layout_width="@dimen/_170sdp"
-                                    android:layout_height="wrap_content"
-                                    android:text=""
-                                    app:fontFamily="@font/roboto"
-                                    android:textSize="@dimen/_12sdp"
-                                    android:textStyle="bold"
-                                    android:background="@drawable/drawer_borderbottom"
-                                    android:paddingBottom="@dimen/_3sdp"/>
+                                    android:orientation="vertical"
+                                    android:background="@color/white"
+                                    android:paddingTop="@dimen/_6sdp">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingTop="@dimen/_13sdp"
+                                        android:paddingLeft="@dimen/_13sdp"
+                                        android:paddingRight="@dimen/_13sdp"
+                                        android:paddingBottom="@dimen/_4sdp">
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:paddingRight="@dimen/_4sdp"
+                                        android:paddingLeft="@dimen/_4sdp"
+                                        android:paddingBottom="@dimen/_13sdp">
+                                        <TextView
+                                            android:id="@+id/nama_anggota"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="Nama Aggota"
+                                            app:fontFamily="@font/roboto"
+                                            android:textStyle="bold"
+                                            android:lines="4"
+                                            android:minLines="1"
+                                            android:textColor="@color/grey_700"
+                                            android:textSize="@dimen/_15sdp"/>
+                                    </LinearLayout>
+                                </LinearLayout>
                             </LinearLayout>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
                             <LinearLayout
-                                android:layout_weight="1"
-                                android:layout_width="@dimen/_300sdp"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:paddingRight="@dimen/_8sdp"
-                                android:paddingTop="@dimen/_8sdp"
-                                android:paddingBottom="@dimen/_8sdp"
-                                android:paddingLeft="@dimen/_6sdp"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="@dimen/_100sdp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:gravity="start"
-                                    android:text="@string/nama_anggota"
-                                    android:background="@color/colorPrimaryAmm"
-                                    app:fontFamily="@font/roboto"
-                                    android:textSize="@dimen/_13sdp"
-                                    android:textColor="@color/white"
-                                    android:paddingBottom="@dimen/_1sdp"/>
-                                <TextView
-                                    android:id="@+id/nama_anggota"
-                                    android:layout_width="@dimen/_170sdp"
-                                    android:layout_height="wrap_content"
-                                    android:text=""
-                                    app:fontFamily="@font/roboto"
-                                    android:textSize="@dimen/_12sdp"
-                                    android:textStyle="bold"
-                                    android:background="@drawable/drawer_borderbottom"
-                                    android:paddingBottom="@dimen/_3sdp"/>
+                                    android:paddingRight="@dimen/_1sdp"
+                                    android:paddingLeft="@dimen/_1sdp"
+                                    android:paddingTop="@dimen/_1sdp"
+                                    android:layout_marginTop="@dimen/_13sdp"
+                                    android:paddingBottom="@dimen/_1sdp">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:background="@drawable/linearlayout_radius"
+                                        android:padding="@dimen/_6sdp">
+                                        <TextView
+                                            android:id="@+id/no_anggota"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingLeft="@dimen/_4sdp"
+                                            android:text="No Anggota"
+                                            app:fontFamily="@font/roboto"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_13sdp"
+                                            android:lines="4"
+                                            android:minLines="1"/>
+                                    </LinearLayout>
+                                </LinearLayout>
                             </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -260,12 +277,12 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="3">
-
                                     <TextView
+                                        android:paddingLeft="@dimen/_6sdp"
                                         android:layout_width="@dimen/_100sdp"
                                         android:layout_height="wrap_content"
                                         android:fontFamily="@font/roboto"
-                                        android:text=" @string/januari"
+                                        android:text="@string/januari"
                                         android:textColor="@color/white"
                                         android:background="@drawable/linearlayout_radius"
                                         android:textSize="@dimen/_13sdp" />
@@ -306,6 +323,7 @@
                                     android:layout_weight="3">
 
                                     <TextView
+                                        android:paddingLeft="@dimen/_6sdp"
                                         android:textSize="@dimen/_13sdp"
                                         android:background="@drawable/linearlayout_radius"
                                         android:textColor="@color/white"
@@ -349,6 +367,7 @@
                                     android:layout_weight="3">
 
                                     <TextView
+                                        android:paddingLeft="@dimen/_6sdp"
                                         android:textSize="@dimen/_13sdp"
                                         android:background="@drawable/linearlayout_radius"
                                         android:textColor="@color/white"
@@ -392,6 +411,7 @@
                                     android:layout_weight="3">
 
                                     <TextView
+                                        android:paddingLeft="@dimen/_6sdp"
                                         android:textSize="@dimen/_13sdp"
                                         android:background="@drawable/linearlayout_radius"
                                         android:textColor="@color/white"
@@ -435,6 +455,7 @@
                                     android:layout_weight="3">
 
                                     <TextView
+                                        android:paddingLeft="@dimen/_6sdp"
                                         android:textSize="@dimen/_13sdp"
                                         android:background="@drawable/linearlayout_radius"
                                         android:textColor="@color/white"
@@ -478,6 +499,7 @@
                                     android:layout_weight="3">
 
                                     <TextView
+                                        android:paddingLeft="@dimen/_6sdp"
                                         android:textSize="@dimen/_13sdp"
                                         android:background="@drawable/linearlayout_radius"
                                         android:textColor="@color/white"
@@ -521,6 +543,7 @@
                                     android:layout_weight="3">
 
                                     <TextView
+                                        android:paddingLeft="@dimen/_6sdp"
                                         android:textSize="@dimen/_13sdp"
                                         android:background="@drawable/linearlayout_radius"
                                         android:textColor="@color/white"
@@ -564,6 +587,7 @@
                                     android:layout_weight="3">
 
                                     <TextView
+                                        android:paddingLeft="@dimen/_6sdp"
                                         android:textSize="@dimen/_13sdp"
                                         android:background="@drawable/linearlayout_radius"
                                         android:textColor="@color/white"
@@ -607,6 +631,7 @@
                                     android:layout_weight="3">
 
                                     <TextView
+                                        android:paddingLeft="@dimen/_6sdp"
                                         android:textSize="@dimen/_13sdp"
                                         android:background="@drawable/linearlayout_radius"
                                         android:textColor="@color/white"
@@ -650,6 +675,7 @@
                                     android:layout_weight="3">
 
                                     <TextView
+                                        android:paddingLeft="@dimen/_6sdp"
                                         android:textSize="@dimen/_13sdp"
                                         android:background="@drawable/linearlayout_radius"
                                         android:textColor="@color/white"
@@ -693,6 +719,7 @@
                                     android:layout_weight="3">
 
                                     <TextView
+                                        android:paddingLeft="@dimen/_6sdp"
                                         android:textSize="@dimen/_13sdp"
                                         android:background="@drawable/linearlayout_radius"
                                         android:textColor="@color/white"
@@ -737,6 +764,7 @@
                                     android:layout_weight="3">
 
                                     <TextView
+                                        android:paddingLeft="@dimen/_6sdp"
                                         android:textSize="@dimen/_13sdp"
                                         android:background="@drawable/linearlayout_radius"
                                         android:textColor="@color/white"

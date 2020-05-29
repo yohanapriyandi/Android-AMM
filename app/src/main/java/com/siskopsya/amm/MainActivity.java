@@ -25,9 +25,8 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.siskopsya.amm.R;
 import com.siskopsya.amm.adapter.MenuAdapter;
-import com.siskopsya.amm.setting.SettingActivity;
+import com.siskopsya.amm.tools.BottomSheetFragment;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -65,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
         nama = findViewById(R.id.txt_nama);
         nama.setText("Assalamu'alaikum "+nama_lengkap);
 
+        BottomSheetFragment btomSheet =
+                BottomSheetFragment.newInstance().newInstance();
+
         txt_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,12 +85,16 @@ public class MainActivity extends AppCompatActivity {
         ly_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SettingActivity.class);
-                finish();
-                startActivity(intent);
+                //Intent intent = new Intent(MainActivity.this, SettingActivity.class);
+                //finish();
+                //startActivity(intent);
+                btomSheet.show(getSupportFragmentManager(),
+                        "add_photo_dialog_fragment");
             }
         });
+
     }
+
     private void getMenuList(String no_anggotae){
         //String url_provinsi="https://yayasansehatmadanielarbah.com/api-siskopsya/menulist.php?auth=c2lza29wc3lhOnNpc2tvcHN5YTEyMw==&&no_anggota="+no_anggotae;
         String url_provinsi="https://yayasansehatmadanielarbah.com/api-siskopsya/menulist.php?auth=c2lza29wc3lhOnNpc2tvcHN5YTEyMw==&&no_anggota="+no_anggotae+"&&db="+db;

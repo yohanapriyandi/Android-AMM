@@ -75,7 +75,7 @@ public class InvestasiActivity extends AppCompatActivity {
         Omset = findViewById(R.id.omset);
         Biaya = findViewById(R.id.biaya);
         Laba = findViewById(R.id.laba);
-        Nisbah = findViewById(R.id.nisbah_sum);
+        Nisbah = findViewById(R.id.nisbah);
         OmsetSum = findViewById(R.id.omset_sum);
         BiayaSum = findViewById(R.id.biaya_sum);
         LabaSum = findViewById(R.id.laba_sum);
