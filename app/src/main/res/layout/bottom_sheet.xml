@@ -57,7 +57,7 @@
                             android:layout_gravity="center"
                             android:layout_width="@dimen/_30sdp"
                             android:layout_height="@dimen/_30sdp"
-                            android:background="@color/green_600"/>
+                            android:background="@drawable/userprofile"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -98,7 +98,7 @@
                             android:layout_gravity="center"
                             android:layout_width="@dimen/_30sdp"
                             android:layout_height="@dimen/_30sdp"
-                            android:background="@color/green_600"/>
+                            android:background="@drawable/withdraw"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -139,7 +139,7 @@
                             android:layout_gravity="center"
                             android:layout_width="@dimen/_30sdp"
                             android:layout_height="@dimen/_30sdp"
-                            android:background="@color/green_600"/>
+                            android:background="@drawable/money"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -186,7 +186,8 @@
                             android:layout_gravity="center"
                             android:layout_width="@dimen/_30sdp"
                             android:layout_height="@dimen/_30sdp"
-                            android:background="@color/green_600"/>
+                            android:background="@drawable/ic_settings_white_24dp"
+                            android:backgroundTint="@color/colorPrimaryAmm" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -227,7 +228,7 @@
                             android:layout_gravity="center"
                             android:layout_width="@dimen/_30sdp"
                             android:layout_height="@dimen/_30sdp"
-                            android:background="@color/green_600"/>
+                            android:background="@drawable/pincode"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"

@@ -103,7 +103,7 @@
                                         android:background="@drawable/linearlayout_radius"
                                         android:padding="@dimen/_6sdp">
                                         <TextView
-                                            android:id="@+id/nama_anggota"
+                                            android:id="@+id/no_anggota"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center"
@@ -113,7 +113,7 @@
                                             android:textStyle="bold"
                                             android:lines="4"
                                             android:minLines="1"
-                                            android:textColor="@color/grey_700"
+                                            android:textColor="@color/white"
                                             android:textSize="@dimen/_15sdp"/>
                                     </LinearLayout>
                                 </LinearLayout>

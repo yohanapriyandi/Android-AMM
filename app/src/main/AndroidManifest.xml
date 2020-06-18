@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ppob.RiwayatActivity"></activity>
+        <activity android:name=".ppob.TransaksiPpobActivity"></activity>
+        <activity android:name=".ppob.RiwayatActivity" />
         <activity android:name=".ppob.GameActivity" />
         <activity android:name=".ppob.VoucherActivity" />
         <activity android:name=".ppob.EmoneyActivity" />

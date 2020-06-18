@@ -36,7 +36,7 @@
                         android:id="@+id/photo_profile"
                         android:layout_width="@dimen/_60sdp"
                         android:layout_height="@dimen/_60sdp"
-                        android:background="@color/colorPrimaryAmm"
+                        android:background="@drawable/userprofile"
                         />
                     <TextView
                         android:id="@+id/sambutan_profile"
@@ -132,7 +132,7 @@
                         android:id="@+id/logo_perusahaan"
                         android:layout_width="@dimen/_60sdp"
                         android:layout_height="@dimen/_60sdp"
-                        android:background="@color/white"/>
+                        android:background="@drawable/logo_app"/>
                     <TextView
                         android:id="@+id/nama_perusahaan"
                         android:layout_width="match_parent"
