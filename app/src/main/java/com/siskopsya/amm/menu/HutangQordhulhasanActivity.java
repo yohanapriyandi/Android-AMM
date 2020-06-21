@@ -109,9 +109,9 @@ public class HutangQordhulhasanActivity extends AppCompatActivity {
                         symbols.setDecimalSeparator(',');
                         DecimalFormat decimalFormat = new DecimalFormat("Rp #,###", symbols);
                         //inisial format rupiah
-                        String RpTotalSaldo = decimalFormat.format(Integer.parseInt(tTotalSaldo));
-                        String rpSudahDibayar =decimalFormat.format(Integer.parseInt(tSudahDibayar));
-                        String rpPembayaranSisa =decimalFormat.format(Integer.parseInt(tPembayaranSisa));
+                        String RpTotalSaldo = FormatBaru(tTotalSaldo);
+                        String rpSudahDibayar =FormatBaru(tSudahDibayar);
+                        String rpPembayaranSisa =FormatBaru(tPembayaranSisa);
 
                         noAnggota.setText(tNoAnggota);
                         namaAnggota.setText(tNamaAnggota);
@@ -144,5 +144,26 @@ public class HutangQordhulhasanActivity extends AppCompatActivity {
         stringRequest.setRetryPolicy(policy);
         requestQueue.add(stringRequest);
 
+    }
+    public String FormatBaru(String duit){
+        String[] debitArray = duit.split("");
+        String debitFinal="";
+        Integer hd=0;
+        for(int d=0;d<debitArray.length;d++){
+            debitFinal+= debitArray[debitArray.length-d-1];
+            if(hd==2){
+                if(debitArray.length-d-1==0){
+
+                }else{
+                    debitFinal+= ".";
+                    hd=0;
+                }
+            }else{
+                hd++;
+            }
+
+        }
+        Log.d("DEBIT FINAL", "onBindViewHolder: "+debitFinal);
+        return "Rp. "+new StringBuilder(debitFinal).reverse().toString();
     }
 }

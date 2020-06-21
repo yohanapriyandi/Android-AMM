@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -82,7 +83,7 @@ public class TransaksiAdapter extends RecyclerView.Adapter<TransaksiAdapter.MyVi
         symbols.setDecimalSeparator(',');
         DecimalFormat decimalFormat = new DecimalFormat("Rp #,###", symbols);
         //inisial format rupiah
-        String saldo = decimalFormat.format(Integer.parseInt(saldoList.get(position)));
+        String saldo = FormatBaru(saldoList.get(position));
 
         //set data ke view
         holder.txtNoTrans.setText(jenisList.get(position));
@@ -92,6 +93,27 @@ public class TransaksiAdapter extends RecyclerView.Adapter<TransaksiAdapter.MyVi
         if (debitList.get(position)=="request"){
             holder.status.setCardBackgroundColor(Color.RED);
         }
+    }
+    public String FormatBaru(String duit){
+        String[] debitArray = duit.split("");
+        String debitFinal="";
+        Integer hd=0;
+        for(int d=0;d<debitArray.length;d++){
+            debitFinal+= debitArray[debitArray.length-d-1];
+            if(hd==2){
+                if(debitArray.length-d-1==0){
+
+                }else{
+                    debitFinal+= ".";
+                    hd=0;
+                }
+            }else{
+                hd++;
+            }
+
+        }
+        Log.d("DEBIT FINAL", "onBindViewHolder: "+debitFinal);
+        return "Rp. "+new StringBuilder(debitFinal).reverse().toString();
     }
     @Override
     public int getItemCount() {

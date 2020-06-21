@@ -108,6 +108,27 @@ public class SHUActivity extends AppCompatActivity {
         finish();
         return true;
     }
+    public String FormatBaru(String duit){
+        String[] debitArray = duit.split("");
+        String debitFinal="";
+        Integer hd=0;
+        for(int d=0;d<debitArray.length;d++){
+            debitFinal+= debitArray[debitArray.length-d-1];
+            if(hd==2){
+                if(debitArray.length-d-1==0){
+
+                }else{
+                    debitFinal+= ".";
+                    hd=0;
+                }
+            }else{
+                hd++;
+            }
+
+        }
+        Log.d("DEBIT FINAL", "onBindViewHolder: "+debitFinal);
+        return "Rp. "+new StringBuilder(debitFinal).reverse().toString();
+    }
     private void getakadList(){
         //final String urll ="https://yayasansehatmadanielarbah.com/api-siskopsya/saldo/shu.php?auth=c2lza29wc3lhOnNpc2tvcHN5YTEyMw==&&no_anggota="+no_anggota;
         final String urll ="https://yayasansehatmadanielarbah.com/api-siskopsya/saldo/shu.php?auth=c2lza29wc3lhOnNpc2tvcHN5YTEyMw==&&no_anggota="+no_anggota+"&&db="+db;
@@ -153,7 +174,7 @@ public class SHUActivity extends AppCompatActivity {
                         symbols.setDecimalSeparator(',');
                         DecimalFormat decimalFormat = new DecimalFormat("Rp #,###", symbols);
                         //inisial format rupiah
-                        String RpTotalSaldo = decimalFormat.format(Integer.parseInt(tTotalSaldo));
+                        String RpTotalSaldo = FormatBaru(tTotalSaldo);
                         noAnggota.setText(tNoAnggota);
                         namaAnggota.setText(tNamaAnggota);
                         //tglGabung.setText(tTgLGabung);
@@ -259,18 +280,18 @@ public class SHUActivity extends AppCompatActivity {
                         symbolsz.setDecimalSeparator(',');
                         DecimalFormat decimalFormat = new DecimalFormat("Rp #,###", symbolsz);
                         //inisial format rupiah
-                        String rpJanuari = decimalFormat.format(Integer.parseInt(tJanuari));
-                        String rpFebruari =decimalFormat.format(Integer.parseInt(tFebruari));
-                        String rpMaret = decimalFormat.format(Integer.parseInt(tMaret));
-                        String rpApril = decimalFormat.format(Integer.parseInt(tApril));
-                        String rpMei = decimalFormat.format(Integer.parseInt(tMei));
-                        String rpJuni  = decimalFormat.format(Integer.parseInt(tJuni));
-                        String rpJuli = decimalFormat.format(Integer.parseInt(tJuli));
-                        String rpAgustus = decimalFormat.format(Integer.parseInt(tAgustus));
-                        String rpSeptember  = decimalFormat.format(Integer.parseInt(tSeptember));
-                        String rpOktober = decimalFormat.format(Integer.parseInt(tOktober));
-                        String rpNovember = decimalFormat.format(Integer.parseInt(tNovember));
-                        String rpDesember = decimalFormat.format(Integer.parseInt(tDesember));
+                        String rpJanuari = FormatBaru(tJanuari);
+                        String rpFebruari =FormatBaru(tFebruari);
+                        String rpMaret = FormatBaru(tMaret);
+                        String rpApril = FormatBaru(tApril);
+                        String rpMei = FormatBaru(tMei);
+                        String rpJuni  = FormatBaru(tJuni);
+                        String rpJuli = FormatBaru(tJuli);
+                        String rpAgustus = FormatBaru(tAgustus);
+                        String rpSeptember  = FormatBaru(tSeptember);
+                        String rpOktober = FormatBaru(tOktober);
+                        String rpNovember = FormatBaru(tNovember);
+                        String rpDesember = FormatBaru(tDesember);
                         Januari.setText(rpJanuari);
                         Februari.setText(rpFebruari);
                         Maret.setText(rpMaret);

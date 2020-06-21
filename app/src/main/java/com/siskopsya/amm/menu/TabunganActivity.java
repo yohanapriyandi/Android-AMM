@@ -147,7 +147,7 @@ public class TabunganActivity extends AppCompatActivity {
                         symbols.setDecimalSeparator(',');
                         DecimalFormat decimalFormat = new DecimalFormat("Rp #,###", symbols);
                         //inisial format rupiah
-                        String RpTotalSaldo = decimalFormat.format(Integer.parseInt(tTotalSaldo));
+                        String RpTotalSaldo = FormatBaru(tTotalSaldo);
                         noAnggota.setText(tNoAnggota);
                         namaAnggota.setText(tNamaAnggota);
                         //tglGabung.setText(tTgLGabung);
@@ -213,6 +213,27 @@ public class TabunganActivity extends AppCompatActivity {
         requestQueue.add(stringRequest);
 
     }
+    public String FormatBaru(String duit){
+        String[] debitArray = duit.split("");
+        String debitFinal="";
+        Integer hd=0;
+        for(int d=0;d<debitArray.length;d++){
+            debitFinal+= debitArray[debitArray.length-d-1];
+            if(hd==2){
+                if(debitArray.length-d-1==0){
+
+                }else{
+                    debitFinal+= ".";
+                    hd=0;
+                }
+            }else{
+                hd++;
+            }
+
+        }
+        Log.d("DEBIT FINAL", "onBindViewHolder: "+debitFinal);
+        return "Rp. "+new StringBuilder(debitFinal).reverse().toString();
+    }
     private void getSaldoList(String no_kontrak){
         final String urlsaldo ="https://yayasansehatmadanielarbah.com/api-siskopsya/saldo/tabunganSaldo.php?auth=c2lza29wc3lhOnNpc2tvcHN5YTEyMw==&&no_anggota="+no_anggota+"&&no_kontrak="+no_kontrak;
         RequestQueue requestQueue2= Volley.newRequestQueue(this);
@@ -246,9 +267,9 @@ public class TabunganActivity extends AppCompatActivity {
                         symbolsz.setDecimalSeparator(',');
                         DecimalFormat decimalFormat = new DecimalFormat("Rp #,###", symbolsz);
                         //inisial format rupiah
-                        String rpDebit = decimalFormat.format(Integer.parseInt(tDebit));
-                        String rpKredit=decimalFormat.format(Integer.parseInt(tKredit));
-                        String rpSaldo= decimalFormat.format(Integer.parseInt(tSaldo));
+                        String rpDebit = FormatBaru(tDebit);
+                        String rpKredit=FormatBaru(tKredit);
+                        String rpSaldo= FormatBaru(tSaldo);
                         debit.setText(rpDebit);
                         kredit.setText(rpKredit);
                         saldo.setText(rpSaldo);
