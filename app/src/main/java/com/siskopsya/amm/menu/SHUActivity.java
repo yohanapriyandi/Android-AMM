@@ -156,7 +156,11 @@ public class SHUActivity extends AppCompatActivity {
                         for(int a=0;a<jNoAkad.length();a++){
                             JSONObject oNoAkad=jNoAkad.getJSONObject(a);
                             tTahun = oNoAkad.getString("tahun");
-                            tahunList.add(tTahun);
+                            if(tTahun.equals("null")){
+
+                            }else{
+                                tahunList.add(tTahun);
+                            }
                         }
                         for(int i=0;i<jArray.length();i++){
                             JSONObject jsonObject1=jArray.getJSONObject(i);
