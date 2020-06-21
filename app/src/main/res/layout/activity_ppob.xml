@@ -132,7 +132,7 @@
                                 <ImageView
                                     android:layout_width="@dimen/_35sdp"
                                     android:layout_height="@dimen/_35sdp"
-                                    android:background="@color/colorPrimaryAmm"/>
+                                    android:background="@drawable/wifi"/>
                                 <TextView
                                     android:paddingTop="@dimen/_6sdp"
                                     android:layout_width="wrap_content"
@@ -152,7 +152,7 @@
                                 <ImageView
                                     android:layout_width="@dimen/_35sdp"
                                     android:layout_height="@dimen/_35sdp"
-                                    android:background="@color/colorPrimaryAmm"/>
+                                    android:background="@drawable/fax"/>
                                 <TextView
                                     android:paddingTop="@dimen/_6sdp"
                                     android:layout_width="wrap_content"
@@ -172,7 +172,7 @@
                                 <ImageView
                                     android:layout_width="@dimen/_35sdp"
                                     android:layout_height="@dimen/_35sdp"
-                                    android:background="@color/colorPrimaryAmm"/>
+                                    android:background="@drawable/electricity"/>
                                 <TextView
                                     android:paddingTop="@dimen/_6sdp"
                                     android:layout_width="wrap_content"
@@ -216,7 +216,7 @@
                                 <ImageView
                                     android:layout_width="@dimen/_35sdp"
                                     android:layout_height="@dimen/_35sdp"
-                                    android:background="@color/colorPrimaryAmm"/>
+                                    android:background="@drawable/fax"/>
                                 <TextView
                                     android:paddingTop="@dimen/_6sdp"
                                     android:layout_width="wrap_content"
@@ -236,7 +236,7 @@
                                 <ImageView
                                     android:layout_width="@dimen/_35sdp"
                                     android:layout_height="@dimen/_35sdp"
-                                    android:background="@color/colorPrimaryAmm"/>
+                                    android:background="@drawable/electricity"/>
                                 <TextView
                                     android:paddingTop="@dimen/_6sdp"
                                     android:layout_width="wrap_content"
@@ -256,7 +256,7 @@
                                 <ImageView
                                     android:layout_width="@dimen/_35sdp"
                                     android:layout_height="@dimen/_35sdp"
-                                    android:background="@color/colorPrimaryAmm"/>
+                                    android:background="@drawable/fax"/>
                                 <TextView
                                     android:paddingTop="@dimen/_6sdp"
                                     android:layout_width="wrap_content"
@@ -284,7 +284,7 @@
                                 <ImageView
                                     android:layout_width="@dimen/_35sdp"
                                     android:layout_height="@dimen/_35sdp"
-                                    android:background="@color/colorPrimaryAmm"/>
+                                    android:background="@drawable/router"/>
                                 <TextView
                                     android:paddingTop="@dimen/_6sdp"
                                     android:layout_width="wrap_content"
@@ -304,7 +304,7 @@
                                 <ImageView
                                     android:layout_width="@dimen/_35sdp"
                                     android:layout_height="@dimen/_35sdp"
-                                    android:background="@color/colorPrimaryAmm"/>
+                                    android:background="@drawable/water"/>
                                 <TextView
                                     android:paddingTop="@dimen/_6sdp"
                                     android:layout_width="wrap_content"
@@ -324,7 +324,7 @@
                                 <ImageView
                                     android:layout_width="@dimen/_35sdp"
                                     android:layout_height="@dimen/_35sdp"
-                                    android:background="@color/colorPrimaryAmm"/>
+                                    android:background="@drawable/transport"/>
                                 <TextView
                                     android:paddingTop="@dimen/_6sdp"
                                     android:layout_width="wrap_content"
@@ -416,7 +416,7 @@
                                 <ImageView
                                     android:layout_width="@dimen/_35sdp"
                                     android:layout_height="@dimen/_35sdp"
-                                    android:background="@color/colorPrimaryAmm"/>
+                                    android:background="@drawable/cost"/>
                                 <TextView
                                     android:paddingTop="@dimen/_6sdp"
                                     android:layout_width="wrap_content"
@@ -436,7 +436,7 @@
                                 <ImageView
                                     android:layout_width="@dimen/_35sdp"
                                     android:layout_height="@dimen/_35sdp"
-                                    android:background="@color/colorPrimaryAmm"/>
+                                    android:background="@drawable/wallet"/>
                                 <TextView
                                     android:paddingTop="@dimen/_6sdp"
                                     android:layout_width="wrap_content"
@@ -456,7 +456,7 @@
                                 <ImageView
                                     android:layout_width="@dimen/_35sdp"
                                     android:layout_height="@dimen/_35sdp"
-                                    android:background="@color/colorPrimaryAmm"/>
+                                    android:background="@drawable/coupon"/>
                                 <TextView
                                     android:paddingTop="@dimen/_6sdp"
                                     android:layout_width="wrap_content"
@@ -484,7 +484,7 @@
                                 <ImageView
                                     android:layout_width="@dimen/_35sdp"
                                     android:layout_height="@dimen/_35sdp"
-                                    android:background="@color/colorPrimaryAmm"/>
+                                    android:background="@drawable/game"/>
                                 <TextView
                                     android:paddingTop="@dimen/_6sdp"
                                     android:layout_width="wrap_content"
