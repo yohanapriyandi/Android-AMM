@@ -97,6 +97,27 @@ public class HutangMurobahahActivity extends AppCompatActivity {
             }
         });
     }
+    public String FormatBaru(String duit){
+        String[] debitArray = duit.split("");
+        String debitFinal="";
+        Integer hd=0;
+        for(int d=0;d<debitArray.length;d++){
+            debitFinal+= debitArray[debitArray.length-d-1];
+            if(hd==2){
+                if(debitArray.length-d-1==0){
+
+                }else{
+                    debitFinal+= ".";
+                    hd=0;
+                }
+            }else{
+                hd++;
+            }
+
+        }
+        Log.d("DEBIT FINAL", "onBindViewHolder: "+debitFinal);
+        return "Rp. "+new StringBuilder(debitFinal).reverse().toString();
+    }
     @Override
     public boolean onSupportNavigateUp(){
         finish();
@@ -147,7 +168,7 @@ public class HutangMurobahahActivity extends AppCompatActivity {
                         symbols.setDecimalSeparator(',');
                         DecimalFormat decimalFormat = new DecimalFormat("Rp #,###", symbols);
                         //inisial format rupiah
-                        String RpTotalSaldo = decimalFormat.format(Integer.parseInt(tTotalSaldo));
+                        String RpTotalSaldo = FormatBaru(tTotalSaldo);
                         noAnggota.setText(tNoAnggota);
                         namaAnggota.setText(tNamaAnggota);
                         //tglGabung.setText(tTgLGabung);
@@ -248,9 +269,9 @@ public class HutangMurobahahActivity extends AppCompatActivity {
                         symbolsz.setDecimalSeparator(',');
                         DecimalFormat decimalFormat = new DecimalFormat("Rp #,###", symbolsz);
                         //inisial format rupiah
-                        String rpTotalAngsuran = decimalFormat.format(Integer.parseInt(tTotalAngsuran));
-                        String rpAngsuranDibayar=decimalFormat.format(Integer.parseInt(tAngsuranDibayar));
-                        String rpSisaAngsuran = decimalFormat.format(Integer.parseInt(tSisaAngsuran));
+                        String rpTotalAngsuran = FormatBaru(tTotalAngsuran);
+                        String rpAngsuranDibayar=FormatBaru(tAngsuranDibayar);
+                        String rpSisaAngsuran = FormatBaru(tSisaAngsuran);
                         totalAngsuran.setText(rpTotalAngsuran);
                         angsuranDibayar.setText(rpAngsuranDibayar);
                         sisaAngsuran.setText(rpSisaAngsuran);

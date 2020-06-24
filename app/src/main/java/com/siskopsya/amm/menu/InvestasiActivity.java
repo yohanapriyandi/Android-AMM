@@ -75,7 +75,7 @@ public class InvestasiActivity extends AppCompatActivity {
         Omset = findViewById(R.id.omset);
         Biaya = findViewById(R.id.biaya);
         Laba = findViewById(R.id.laba);
-        Nisbah = findViewById(R.id.nisbah_sum);
+        Nisbah = findViewById(R.id.nisbah);
         OmsetSum = findViewById(R.id.omset_sum);
         BiayaSum = findViewById(R.id.biaya_sum);
         LabaSum = findViewById(R.id.laba_sum);
@@ -271,8 +271,6 @@ public class InvestasiActivity extends AppCompatActivity {
                         //lyData.setVisibility(View.VISIBLE);
                         //totalD.setText(txtTotalD);
                         //inisial format rupiah
-                        String rpNilaiProjek = decimalFormat.format(Integer.parseInt(tNilaiProjek));
-                        String rpPorsimodal = decimalFormat.format(Integer.parseInt(tPorsiModal));
                         //kode projekkk belum
                         final ArrayAdapter<String> projekArrayAdapter = new ArrayAdapter<String>(
                                 InvestasiActivity.this,R.layout.support_simple_spinner_dropdown_item,kodeProjekList){
@@ -308,8 +306,8 @@ public class InvestasiActivity extends AppCompatActivity {
                         KodeProjek.setAdapter(projekArrayAdapter);
                         namaProject.setText(namaProjectList.get(0));
                         AkadaAwal.setText(akadAwalList.get(0));
-                        NilaiProjek.setText(decimalFormat.format(Integer.parseInt(nilaiProjekList.get(0))));
-                        PorsiModal.setText(decimalFormat.format(Integer.parseInt(porsiModalList.get(0))));
+                        NilaiProjek.setText(FormatBaru(nilaiProjekList.get(0)));
+                        PorsiModal.setText(FormatBaru(porsiModalList.get(0)));
                         mudhorib.setText(nisbahMudhoribList.get(0)+"%");
                         investor.setText(nisbahInvestorList.get(0)+"%");
                         tahunList.add(tahunTemp);
@@ -374,6 +372,27 @@ public class InvestasiActivity extends AppCompatActivity {
         stringRequest.setRetryPolicy(policy);
         requestQueue.add(stringRequest);
 
+    }
+    public String FormatBaru(String duit){
+        String[] debitArray = duit.split("");
+        String debitFinal="";
+        Integer hd=0;
+        for(int d=0;d<debitArray.length;d++){
+            debitFinal+= debitArray[debitArray.length-d-1];
+            if(hd==2){
+                if(debitArray.length-d-1==0){
+
+                }else{
+                    debitFinal+= ".";
+                    hd=0;
+                }
+            }else{
+                hd++;
+            }
+
+        }
+        Log.d("DEBIT FINAL", "onBindViewHolder: "+debitFinal);
+        return "Rp. "+new StringBuilder(debitFinal).reverse().toString();
     }
     private void getSaldoList(String tahunStr, String bulanStr, String kodeStr, String noAng){
         final String urlsaldo ="https://yayasansehatmadanielarbah.com/api-siskopsya/saldo/investasiSaldo.php?auth=c2lza29wc3lhOnNpc2tvcHN5YTEyMw==&&no_anggota="+no_anggota+"&&tahun="+tahunStr+"&&bulan="+bulanStr+"&&kode="+kodeStr+"&&no_anggota="+noAng+"&&db="+DB;

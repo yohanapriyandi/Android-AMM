@@ -121,6 +121,7 @@
                         </RelativeLayout>
                     </RelativeLayout>
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -258,6 +259,7 @@
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/_13sdp"
                                         android:textColor="@color/white"
+                                        android:paddingLeft="@dimen/_4sdp"
                                         app:fontFamily="@font/roboto"
                                         android:paddingBottom="@dimen/_5sdp"
                                         android:background="@drawable/linearlayout_radius"
@@ -299,6 +301,7 @@
                                         android:textColor="@color/white"
                                         android:background="@drawable/linearlayout_radius"
                                         app:fontFamily="@font/roboto"
+                                        android:paddingLeft="@dimen/_4sdp"
                                         android:paddingBottom="@dimen/_5sdp"
                                         android:text="@string/simpanan_wajib"/>
                                 </LinearLayout>
@@ -316,6 +319,7 @@
                                         android:textSize="14sp"
                                         android:paddingBottom="@dimen/_5sdp"
                                         app:fontFamily="@font/roboto"
+
                                         android:gravity="end"
                                         android:text="Rp. 5.000.000,00"/>
                                 </LinearLayout>
@@ -339,6 +343,7 @@
                                         android:textColor="@color/white"
                                         android:paddingBottom="@dimen/_5sdp"
                                         app:fontFamily="@font/roboto"
+                                        android:paddingLeft="@dimen/_4sdp"
                                         android:background="@drawable/linearlayout_radius"
                                         android:text="@string/simpanan_sukarela"/>
                                 </LinearLayout>

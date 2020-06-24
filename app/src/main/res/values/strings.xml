@@ -28,5 +28,10 @@
     <string name="total_tabungan">Total Tabungan</string>
     <string name="april">April</string>
     <string name="no_rekening">No. Rekening</string>
+    <string name="alamat_perusahaan">Alamat Perusahaan</string>
+    <string name="nama_perusahaan">SISKOPSYA</string>
+    <string name="kontak_perusahaan">08123123123</string>
+    <string name="tentang_perusahaan">Tentang Perusahaan</string>
+    <string name="sambutan_profile">Selamat Datang Kembali! </string>
     <string name="profil">Data Anggota</string>
 </resources>

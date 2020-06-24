@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -93,10 +94,10 @@ public class SaldoAdapter extends RecyclerView.Adapter<SaldoAdapter.MyViewHolder
         symbols.setDecimalSeparator(',');
         DecimalFormat decimalFormat = new DecimalFormat("Rp #,###", symbols);
         //inisial format rupiah
-        String totalSaldo = decimalFormat.format(Integer.parseInt(saldoList.get(position)));
-        String pinjaman = decimalFormat.format(Integer.parseInt(pinjamanList.get(position)));
-        String bayar = decimalFormat.format(Integer.parseInt(bayarList.get(position)));
-        String sisa = decimalFormat.format(Integer.parseInt(sisaList.get(position)));
+        String totalSaldo = FormatBaru(saldoList.get(position));
+        String pinjaman = FormatBaru(pinjamanList.get(position));
+        String bayar = FormatBaru(bayarList.get(position));
+        String sisa = FormatBaru(sisaList.get(position));
 
         //set data ke view
         holder.txtKodeSaldo.setText(kodeSaldoList.get(position));
@@ -121,6 +122,27 @@ public class SaldoAdapter extends RecyclerView.Adapter<SaldoAdapter.MyViewHolder
                 opened[0] = !opened[0];
             }
         });
+    }
+    public String FormatBaru(String duit){
+        String[] debitArray = duit.split("");
+        String debitFinal="";
+        Integer hd=0;
+        for(int d=0;d<debitArray.length;d++){
+            debitFinal+= debitArray[debitArray.length-d-1];
+            if(hd==2){
+                if(debitArray.length-d-1==0){
+
+                }else{
+                    debitFinal+= ".";
+                    hd=0;
+                }
+            }else{
+                hd++;
+            }
+
+        }
+        Log.d("DEBIT FINAL", "onBindViewHolder: "+debitFinal);
+        return "Rp. "+new StringBuilder(debitFinal).reverse().toString();
     }
     @Override
     public int getItemCount() {

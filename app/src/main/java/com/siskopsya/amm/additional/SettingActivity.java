@@ -1,4 +1,4 @@
-package com.siskopsya.amm.setting;
+package com.siskopsya.amm.additional;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -105,6 +105,11 @@ public class SettingActivity extends AppCompatActivity {
         Intent intent = new Intent(SettingActivity.this, MainActivity.class);
         startActivity(intent);
         finish();
+    }
+    @Override
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
     }
     // ------ FUNCTION CEK LOGIN ---------------
     private void checkLogin(final String noAnggota, final String passLama, final String passBaru, final String DB) {

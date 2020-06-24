@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="com.siskopsya.amm.app.AppController"
+        android:name=".app.AppController"
         android:allowBackup="true"
         android:icon="@drawable/logo_app"
         android:label="@string/app_name"
@@ -15,26 +15,47 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.siskopsya.amm.setting.SettingActivity"></activity>
+        <activity android:name=".ppob.TransaksiPpobActivity"></activity>
+        <activity android:name=".ppob.RiwayatActivity" />
+        <activity android:name=".ppob.GameActivity" />
+        <activity android:name=".ppob.VoucherActivity" />
+        <activity android:name=".ppob.EmoneyActivity" />
+        <activity android:name=".ppob.AngsuranActivity" />
+        <activity android:name=".ppob.BpjsActivity" />
+        <activity android:name=".ppob.PgnActivity" />
+        <activity android:name=".ppob.TvActivity" />
+        <activity android:name=".ppob.PdamActivity" />
+        <activity android:name=".ppob.InternetActivity" />
+        <activity android:name=".ppob.PulsaPascaActivity" />
+        <activity android:name=".ppob.PlnActivity" />
+        <activity android:name=".ppob.TelponActivity" />
+        <activity android:name=".ppob.TokenActivity" />
+        <activity android:name=".ppob.PulsaActivity" />
+        <activity android:name=".ppob.DataActivity" />
+        <activity android:name=".additional.PPOBActivity" />
+        <activity android:name=".additional.ProfileActivity" />
+        <activity android:name=".additional.TransaksiActivity" />
+        <activity android:name=".additional.WithdrawActivity" />
+        <activity android:name=".additional.SettingActivity" />
 
-        <service android:name="com.siskopsya.amm.services.MyFirebaseInstanceIdService">
+        <service android:name=".services.MyFirebaseInstanceIdService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="com.siskopsya.amm.services.MyFirebaseMessagingService">
+        <service android:name=".services.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
-        <activity android:name="com.siskopsya.amm.menu.SHUActivity" />
-        <activity android:name="com.siskopsya.amm.menu.InvestasiActivity" />
-        <activity android:name="com.siskopsya.amm.menu.HutangQordhulhasanActivity" />
-        <activity android:name="com.siskopsya.amm.menu.HutangMurobahahActivity" />
-        <activity android:name="com.siskopsya.amm.menu.TabunganActivity" />
-        <activity android:name="com.siskopsya.amm.menu.SimpananActivity" />
-        <activity android:name="com.siskopsya.amm.Launch">
+        <activity android:name=".menu.SHUActivity" />
+        <activity android:name=".menu.InvestasiActivity" />
+        <activity android:name=".menu.HutangQordhulhasanActivity" />
+        <activity android:name=".menu.HutangMurobahahActivity" />
+        <activity android:name=".menu.TabunganActivity" />
+        <activity android:name=".menu.SimpananActivity" />
+        <activity android:name=".Launch">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,10 +63,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.siskopsya.amm.MainActivity"
+            android:name=".MainActivity"
             android:configChanges="orientation|screenSize" />
         <activity
-            android:name="com.siskopsya.amm.LoginActivity"
+            android:name=".LoginActivity"
             android:configChanges="orientation|screenSize" />
 
         <meta-data

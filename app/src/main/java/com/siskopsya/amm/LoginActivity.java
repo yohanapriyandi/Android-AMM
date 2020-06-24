@@ -142,7 +142,9 @@ public class LoginActivity extends AppCompatActivity {
                     JSONObject jObj = new JSONObject(response);
                     success = jObj.getInt("success");
                     String no_anggota = jObj.getString("no_anggota");
+                    String no_anggota2 = jObj.getString("no_anggota2");
                     String nama_lengkap = jObj.getString("nama_lengkap");
+                    String alamat = jObj.getString("alamat");
                     String kode_login =jObj.getString("kode_login");
                     String db =jObj.getString("db");
 
@@ -153,7 +155,9 @@ public class LoginActivity extends AppCompatActivity {
                         SharedPreferences.Editor editor = sharedpreferences.edit();
                         editor.putBoolean("session_status", true);
                         editor.putString("no_anggota", no_anggota);
+                        editor.putString("no_anggota2", no_anggota2);
                         editor.putString("nama_lengkap", nama_lengkap);
+                        editor.putString("alamat", alamat);
                         editor.putString("kode_login", kode_login);
                         editor.putString("db", "yayasan5_"+db);
                         editor.commit();
