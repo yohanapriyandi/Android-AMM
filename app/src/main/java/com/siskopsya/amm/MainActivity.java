@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     boolean doubleBackToExitPressedOnce = false;
     TextView txt_logout, nama;
     SharedPreferences sharedpreferences;
-    LinearLayout ly_setting;
+    LinearLayout ly_setting, ly_reload;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,12 +61,22 @@ public class MainActivity extends AppCompatActivity {
         getMenuList(no_anggota);
         txt_logout=findViewById(R.id.txt_logout);
         ly_setting=findViewById(R.id.btn_setting);
+        ly_reload = findViewById(R.id.btn_refresh);
         nama = findViewById(R.id.txt_nama);
         nama.setText("Assalamu'alaikum "+nama_lengkap);
 
         BottomSheetFragment btomSheet =
                 BottomSheetFragment.newInstance().newInstance();
-
+        ly_reload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pDialog = new ProgressDialog(MainActivity.this);
+                pDialog.setCancelable(false);
+                pDialog.setMessage("Memuat data ....");
+                pDialog.show();
+                getMenuList(no_anggota);
+            }
+        });
         txt_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -83,17 +83,34 @@
                 android:textColor="@color/white" />
 
             <LinearLayout
-                android:id="@+id/btn_setting"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:orientation="horizontal"
                 android:layout_weight="2">
-                <ImageView
-                    android:layout_marginLeft="@dimen/_180sdp"
-                    android:layout_width="@dimen/_20sdp"
-                    android:layout_height="@dimen/_20sdp"
-                    android:background="@drawable/ic_settings_white_24dp"/>
+                <LinearLayout
+                    android:id="@+id/btn_refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_marginLeft="@dimen/_158sdp"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:background="@drawable/icons8_update_left_rotation_48px"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/btn_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:background="@drawable/ic_settings_white_24dp"/>
+                </LinearLayout>
+
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
