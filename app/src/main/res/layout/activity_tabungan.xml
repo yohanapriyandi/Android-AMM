@@ -75,7 +75,7 @@
                                             android:lines="4"
                                             android:minLines="1"
                                             android:textColor="@color/grey_700"
-                                            android:textSize="@dimen/_20sdp"/>
+                                            android:textSize="@dimen/_14sdp"/>
                                     </LinearLayout>
                                 </LinearLayout>
                             </LinearLayout>
